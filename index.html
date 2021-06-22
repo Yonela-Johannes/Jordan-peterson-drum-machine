@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Jordan Peterson qoutes</title>
+  </head>
+  <body>
+   
+    <div class="container" id="drum-machine">
+        <h1 class="text-center">Jordan Peterson drum qoutes</h1>
+        <div class="card my-3">
+            <div class="card-body">
+                    <div id="display" class="text-center">
+                        The display is currently empty
+                    </div>
+            </div>
+                <button class="drum-pad btn btn-primary btn-block my-1" onClick="play('Q')" id="drum-0">Q
+                    <audio id="Q" src="clip/jbq.mp3" class="clip" >
+                </button>
+
+                <button class="drum-pad btn btn-block btn-primary my-1" onClick="play('W')" id="drum-1">W
+                    <audio id="W" src="clip/jbw.mp3" class="clip">
+                </button>
+
+                <button class="drum-pad btn btn-block btn-primary my-1" onClick="play('E')" id="drum-2">E
+                    <audio src="clip/jbe.mp3" class="clip" id="E">
+                </button>
+
+                <button class="drum-pad btn btn-block btn-primary my-1" onClick="play('A')" id="drum-3">A
+                    <audio src="clip/jba.mp3" class="clip" id="A">
+                </button>
+
+                <button class="drum-pad btn btn-block btn-primary my-1" onClick="play('S')" id="drum-4">S
+                    <audio src="clip/jbs.mp3" class="clip" id="S">
+                </button>
+
+                <button class="drum-pad btn btn-block btn-primary my-1" onClick="play('D')" id="drum-5">D
+                    <audio src="clip/jbd.mp3" class="clip" id="D">
+                </button>
+
+                <button class="drum-pad btn btn-block btn-primary my-1" onClick="play('Z')" id="drum-6">Z
+                    <audio src="clip/jbz.mp3" class="clip" id="Z">
+                </button> 
+
+                <button class="drum-pad btn btn-block btn-primary my-1" onClick="play('X')" id="drum-7">X
+                    <audio src="clip/jbx.mp3" class="clip" id="X">
+                </button>
+
+                <button class="drum-pad btn btn-block btn-primary my-1" onClick="play('C')" id="drum-8">C
+                    <audio src="clip/jbc.mp3" class="clip" id="C">
+                </button> 
+        </div>       
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script>
+
+        function play(str){
+                        
+            var audio = document.getElementById(str);  
+            audio.play();
+            
+            if(str ==="q"|| str === "Q"){
+                document.getElementById('display').innerHTML = "On Education and Men";
+            }
+            else if(str === "w" || str === "W"){
+                document.getElementById('display').innerHTML = "On Forest Fires";
+                
+            }
+            else if(str === "e" || str === "E"){
+                document.getElementById('display').innerHTML = "The Zebra story and Human's";
+                
+            }
+            else if(str === "a" || str === 'A'){
+                document.getElementById('display').innerHTML = "On Females and Male";
+                
+            }
+            else if(str === "s" || str === 'S'){
+                document.getElementById('display').innerHTML = "On Cruelty by Carl Jung";
+                
+            }
+            else if(str === "d" || str === 'D'){
+                document.getElementById('display').innerHTML = "Jesus Christ";
+                
+            }
+            else if(str === "z" || str === 'Z'){
+                
+                document.getElementById('display').innerHTML = "The Future Authoring Program";
+            }
+            else if(str === "x" || str === 'X'){
+                document.getElementById('display').innerHTML = "Pathology in Your Life";
+                
+            }
+            else if(str === "c" || str === 'C'){
+                
+                document.getElementById('display').innerText = "On Change";
+            }
+
+
+        }
+        window.document.onkeyup = function(event){
+            let keystroke = event.key
+
+            if(keystroke ==="q"|| keystroke === "Q"){
+                play('Q');
+            }
+            else if(keystroke === "w" || keystroke === "W"){
+                play('W');
+            }
+            else if(keystroke === "e" || keystroke === "E"){
+                play('E');
+            }
+            else if(keystroke === "a" || keystroke === 'A'){
+                play('A');
+            }
+            else if(keystroke === "s" || keystroke === 'S'){
+                play('S');
+            }
+            else if(keystroke === "d" || keystroke === 'D'){
+                play('D');
+            }
+            else if(keystroke === "z" || keystroke === 'Z'){
+                play('Z');
+            }
+            else if(keystroke === "x" || keystroke === 'X'){
+                play('X');
+            }
+            else if(keystroke === "c" || keystroke === 'C'){
+                play('C');
+            }
+        }
+    </script>
+  </body>
+</html>
